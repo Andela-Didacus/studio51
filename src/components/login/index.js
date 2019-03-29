@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Logo from "../logo";
+import auth from "../auth/auth";
 import "./login.css";
 
 class Login extends Component {
@@ -20,7 +21,13 @@ class Login extends Component {
                 <div className="login-button-section flex-column">
                     <span style={{ fontSize: "1.3rem" }}>𝗣𝗹𝗲𝗮𝘀𝗲 𝗟𝗼𝗴 𝗶𝗻 𝘄𝗶𝘁𝗵 𝘆𝗼𝘂𝗿 𝗲𝗺𝗮𝗶𝗹 𝘁𝗼 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗲</span>
                     <div style={{ display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                        <div className="login-button">
+                        <div className="login-button" onClick={ 
+                            ()=> {
+                                auth.login(()=> {
+                                    this.props.history.push("/")
+                                })
+                            }
+                        }>
                             <span className="google-logo flex-column"></span>
                             <span className="google-sign-in flex-column">𝗦𝗶𝗴𝗻 𝗶𝗻 𝘄𝗶𝘁𝗵 𝗚𝗼𝗼𝗴𝗹𝗲</span>
                         </div>
