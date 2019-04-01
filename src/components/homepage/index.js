@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import auth from "../auth/auth";
+// import auth from "../auth/auth";
+import NavBar from "../navBar";
 
 class Homepage extends Component {
     render() {
         return (
             <div>
-                <h1>Homepage</h1>
-                <button
+                <NavBar />
+                {/* <button
                     onClick={() => {
                         auth.logout(() => {
                             this.props.history.push("/login");
                         })
                     }}
-                >Logout</button>
+                >Logout</button> */}
             </div>
         )
     }
