@@ -23,7 +23,7 @@ class NavBar extends Component {
                 <div className="nav-links">
                     { this.renderNavigationLinks(navigationLinks) }
                     <div className="nav-link">
-                        <i class="material-icons">menu</i>
+                        <i className="material-icons">menu</i>
                     </div>
                 </div>
             </div>
