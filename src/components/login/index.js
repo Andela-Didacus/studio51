@@ -45,7 +45,7 @@ class Login extends Component {
                             onSuccess={this.loginSuccess}
                             onFailure={this.loginFailure}
                             cookiePolicy={'single_host_origin'}
-                        />        
+                        />  
                     </div>
                 </div>
              </div>

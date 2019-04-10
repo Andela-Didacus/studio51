@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-// import auth from "../auth/auth";
+import { BrowserRouter, Switch } from "react-router-dom";
+import { ProtectedRoute } from "../auth/protectedRoute";
 import NavBar from "../navBar";
 
 class Homepage extends Component {
@@ -7,13 +8,11 @@ class Homepage extends Component {
         return (
             <div>
                 <NavBar />
-                {/* <button
-                    onClick={() => {
-                        auth.logout(() => {
-                            this.props.history.push("/login");
-                        })
-                    }}
-                >Logout</button> */}
+                <BrowserRouter>
+                    <Switch>
+                        
+                    </Switch>
+                </BrowserRouter>
             </div>
         )
     }
