@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-// import auth from "../auth/auth";
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
+// import { ProtectedRoute } from "../auth/protectedRoute";
 import NavBar from "../navBar";
+import "./homepage.scss"
+import HomePageContainer from "../homePageContainer";
 
 class Homepage extends Component {
     render() {
         return (
-            <div>
+            <div className="home-page">
                 <NavBar />
-                {/* <button
-                    onClick={() => {
-                        auth.logout(() => {
-                            this.props.history.push("/login");
-                        })
-                    }}
-                >Logout</button> */}
+                <HomePageContainer />
             </div>
         )
     }

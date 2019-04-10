@@ -1,9 +1,21 @@
 import React, { Component } from "react";
+import { GoogleLogin } from 'react-google-login';
 import Logo from "../logo";
 import auth from "../auth/auth";
 import "./login.css";
 
 class Login extends Component {
+    loginSuccess = (response) => {
+        console.log(response);
+        auth.login(()=> {
+            this.props.history.push("/")
+        })
+    }
+
+    loginFailure = (response) => {
+        console.log(response);
+    }
+
     render() {
         return (
             <div className="login-main">
@@ -21,16 +33,19 @@ class Login extends Component {
                 <div className="login-button-section flex-column">
                     <span style={{ fontSize: "1.3rem" }}>𝗣𝗹𝗲𝗮𝘀𝗲 𝗟𝗼𝗴 𝗶𝗻 𝘄𝗶𝘁𝗵 𝘆𝗼𝘂𝗿 𝗲𝗺𝗮𝗶𝗹 𝘁𝗼 𝗰𝗼𝗻𝘁𝗶𝗻𝘂𝗲</span>
                     <div style={{ display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                        <div className="login-button" onClick={ 
-                            ()=> {
-                                auth.login(()=> {
-                                    this.props.history.push("/")
-                                })
-                            }
-                        }>
-                            <span className="google-logo flex-column"></span>
-                            <span className="google-sign-in flex-column">𝗦𝗶𝗴𝗻 𝗶𝗻 𝘄𝗶𝘁𝗵 𝗚𝗼𝗼𝗴𝗹𝗲</span>
-                        </div>
+                        <GoogleLogin
+                            clientId="954845521802-bas3vs2n9bndvot8cr84hvsarppco0m4.apps.googleusercontent.com"
+                            render={renderProps => (
+                                <div className="login-button" onClick={renderProps.onClick}>
+                                    <span className="google-logo flex-column"></span>
+                                    <span className="google-sign-in flex-column">𝗦𝗶𝗴𝗻 𝗶𝗻 𝘄𝗶𝘁𝗵 𝗚𝗼𝗼𝗴𝗹𝗲</span>
+                                </div>
+                            )}
+                            buttonText="Login"
+                            onSuccess={this.loginSuccess}
+                            onFailure={this.loginFailure}
+                            cookiePolicy={'single_host_origin'}
+                        />  
                     </div>
                 </div>
              </div>

@@ -1,0 +1,29 @@
+.footer-section {
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,.5),rgba(0,0,0,.1)), url(../../images/background-main.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        .footer-text {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+}
