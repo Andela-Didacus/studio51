@@ -4,6 +4,7 @@ import Login from "../login";
 import Homepage from "../homepage";
 import { ProtectedRoute } from "../auth/protectedRoute";
 import './App.css';
+import NavBar from '../navBar';
 
 class App extends Component {
   render() {
@@ -11,9 +12,9 @@ class App extends Component {
       <BrowserRouter>
           <div className="main">
             <Switch>
-              <ProtectedRoute exact component={ Homepage } path="/" />
+              <Route exact component={ Homepage } path="/" />
               <Route exact component={Login} path="/login" />
-              <Route exact path="*" component={()=> "404 Not Found"} />
+              {/* <Route exact path="*" component={()=> "404 Not Found"} /> */}
             </Switch>
           </div>
       </BrowserRouter>
