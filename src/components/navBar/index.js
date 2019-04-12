@@ -25,7 +25,7 @@ class NavBar extends Component {
                     <Dropdown
                         name="Location"
                         items={["Kisumu", "Nairobi", "Mombasa", "Nakuru"]}
-                        dropdownStyle={{ width: "9rem", color: "white", zIndex: "2", marginTop: "1rem"}}
+                        dropdownStyle={{ width: "8rem", color: "white", zIndex: "2", marginTop: ".6rem"}}
                     />
                     { this.renderNavigationLinks(navigationLinks) }
                     <div className="nav-link">
