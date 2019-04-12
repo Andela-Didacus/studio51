@@ -18,7 +18,7 @@ class Dropdown extends Component {
 
     renderDropdown = (items) => {
         const dropdownItems = items.map((item, index) => (
-            <li key={ index }>
+            <li key={ index } onClick={ this.props.itemClick }>
                 { item }
             </li>
         ))
