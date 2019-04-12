@@ -22,29 +22,19 @@ class Dropdown extends Component {
                 { item }
             </li>
         ))
+
+        return dropdownItems;
     }
 
     render() {
-        const { items, name, headerStyle, listStyle, itemClick } = this.props;
+        const { items, name, dropdownStyle, listStyle, itemClick } = this.props;
         return (
-            // <div className="dropdown-wrapper">
-            //     <div className="dropdown-header" style={ headerStyle }>
-            //         <a className="dropdown-header-title" onClick={ this.toggleDropdown }>
-            //             { name }
-            //         </a>
-            //     </div>
-            //     <ul className="dropdown-list" style={ listStyle } onClick={ itemClick }>
-            //         {this.renderDropdown(items)}
-            //     </ul>
-            // </div>
-            <div className="dropdown">
+            <div className="dropdown" style={ dropdownStyle }>
                 <div className="dropdown-button">
                     <a>{ name }</a>
                 </div>
                 <ul>
-                    <li>Kisumu</li>
-                    <li>Nairobi</li>
-                    <li>Mombasa</li>
+                    { this.renderDropdown(items) }
                 </ul>
             </div>
         )

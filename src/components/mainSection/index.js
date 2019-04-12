@@ -7,10 +7,6 @@ class MainSection extends Component {
         return (
             <div className="main-section">
                 Main Section
-                <Dropdown
-                    name="location"
-                    items={["Kisumu", "Mombasa", "Nairobi"]}
-                />
             </div>
         )
     }

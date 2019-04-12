@@ -1,7 +1,7 @@
 .dropdown {
-    margin: 0 auto;
-    margin-top: .1rem;
+    margin: auto 0;
     width: 100%;
+    text-align: center;
 }
 
 .dropdown-button {
@@ -17,31 +17,38 @@
     list-style-type: none;
     padding-inline-start: 0;
     margin-block-start: .1rem;
-    top: 0;
-
+    position: fixed;
+    top: 3.9rem;
+    width: 8rem;
+    z-index: 1;
+    color: black;
+    background: white;
 }
 
 .dropdown ul li {
-    padding: .4rem;
-    background: white;
+    padding: .5rem;
+    background: transparent;
     display: none;
     cursor: pointer;
     opacity: 0;
+    border-bottom: #d8d8d8 solid .005rem;
 }
 
 .dropdown:hover li {
     animation: load 1.5s forwards;
     display: block;
-    transition: background-color 0.6s ease;  
+    background: white;
+    transition: background-color 0.6s ease;
 }
 
 .dropdown li:hover {
-    background: #c3c5d1;
+    background: #b0b2c2 !important;
     color: white;
 }
 
 @keyframes load{
-    0%{
+    0%{ 
+        opacity: 0;
         transform: translateY(0);
     }
     100%{
