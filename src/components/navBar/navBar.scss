@@ -1,16 +1,16 @@
 .navbar-main {
-    height: 4rem;
+    height: 3rem;
     width: 100%;
     padding-top: 1rem;
     position: fixed;
     overflow: hidden;
     top: 0;
-    z-index: 100;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: rgba(130, 130, 130, 0.5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
     background: url(../../images/background-main.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
