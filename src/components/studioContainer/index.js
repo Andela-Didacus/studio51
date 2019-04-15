@@ -4,7 +4,7 @@ import "./studioContainer.scss";
 class studioContainer extends Component {
     render() {
         return (
-            <div className="studio-container">
+            <div className="studio-container" id="Search">
                 <span>Studio Container</span>
             </div>
         )

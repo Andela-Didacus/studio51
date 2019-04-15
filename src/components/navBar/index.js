@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./navBar.scss";
 import Dropdown from "../dropdown";
 
@@ -7,7 +8,7 @@ class NavBar extends Component {
     renderNavigationLinks = (links) => {
         const mappedLinks = links.map((link, index) => (
             <div key={index} className="nav-link">
-                <span>{ link }</span>
+                <Link><span>{ link }</span></Link>
             </div>
         ));
         return mappedLinks;

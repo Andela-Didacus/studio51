@@ -32,6 +32,11 @@
             font-weight: bolder;
             color: white;
             font-family: Din pro;
+
+            > a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 
