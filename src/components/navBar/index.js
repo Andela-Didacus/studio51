@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./navBar.scss";
 import Dropdown from "../dropdown";
+import SideBar from "../sideBar";
 
 class NavBar extends Component {
 
@@ -29,9 +30,7 @@ class NavBar extends Component {
                         dropdownStyle={{ width: "8rem", color: "white", zIndex: "2", marginTop: ".6rem"}}
                     />
                     { this.renderNavigationLinks(navigationLinks) }
-                    <div className="nav-link">
-                        <i className="material-icons">menu</i>
-                    </div>
+                    <SideBar />
                 </div>
             </div>
         )
