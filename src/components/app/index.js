@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "../login";
 import Homepage from "../homepage";
-import { ProtectedRoute } from "../auth/protectedRoute";
+// import { ProtectedRoute } from "../auth/protectedRoute";
 import './App.css';
-import NavBar from '../navBar';
 
 class App extends Component {
   render() {

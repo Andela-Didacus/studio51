@@ -27,10 +27,10 @@ class Dropdown extends Component {
     }
 
     render() {
-        const { items, name, dropdownStyle, listStyle, itemClick } = this.props;
+        const { items, name, dropdownStyle } = this.props;
         return (
             <div class="dropdown" style={ dropdownStyle }> 
-                <a href="#" className="dropdown-button">{ name }</a>
+                <span className="dropdown-button">{ name }</span>
                 <div className="dropdown-content"> 
                     <ul>
                         { this.renderDropdown(items) }
